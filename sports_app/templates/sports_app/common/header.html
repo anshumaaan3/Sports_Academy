@@ -1,0 +1,76 @@
+{% load static %}
+<style>
+    .nav-link {
+    color: white !important;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+   .dropdown-menu {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    background-color: #e4e7ef !important;
+    border-radius: 0 !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+    .dropdown-item {
+    background-color: #061a55 !important;
+    color: rgb(241, 240, 238)!important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+  }
+ 
+    .dropdown-item:hover {
+    background-color: #03081c !important;
+  } 
+</style>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#03133f">
+    <div class="container-fluid">
+        <img src="{% static 'sports_app/images/logo.png' %}" alt="" style="height:80px;width:80px;border-radius:50%">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus/">AboutUs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus/">ContactUs</a>
+                </li>
+              
+                   <li class="nav-item">
+                    <a class="nav-link" href="/view_courses/">Our Courses</a>
+                </li> 
+                 <li class="nav-item">
+                    <a class="nav-link" href="/view_coach/">Our Coachs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Sports Guide
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/about_cricket/">About Cricket</a></li>
+                        <li><a class="dropdown-item" href="/about_badminton/">About Badminton</a></li>
+                        <li><a class="dropdown-item" href="/about_swimming/">About Swimming</a></li>
+                        <li><a class="dropdown-item" href="/about_athletics/">About Athletics</a></li>
+            </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        User
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/Registration/">Register Now</a></li>
+                        <li><a class="dropdown-item" href="/user_login/">Login</a></li>
+            </ul>
+           
+        </div>
+  </div>
+</nav>

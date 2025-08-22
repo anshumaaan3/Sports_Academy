@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badminton</title>
+  {% include "sports_app/common/common_css.html" %}
+
+  <style>
+    .badminton-section {
+      padding: 40px 20px;
+      background-color: #fff8f0;
+    }
+    .badminton-section h2 {
+      color: #8b4513;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .badminton-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .badminton-section p {
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+    .badminton-section ul {
+      margin-bottom: 20px;
+    }
+    /* Famous players section */
+    .players-section {
+      margin-top: 40px;
+    }
+    .player-card {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .player-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #8b4513;
+      transition: transform 0.3s;
+    }
+    .player-card img:hover {
+      transform: scale(1.1);
+    }
+    .player-name {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #8b4513;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "sports_app/common/header.html" %}
+
+  <!-- Badminton Content -->
+  <section class="badminton-section container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'sports_app/images/badminton.jpg' %}" alt="Badminton Image">
+        <img src="{% static 'sports_app/images/badminton2.jpeg' %}" alt="Badminton Action Image">
+      </div>
+      <div class="col-md-6">
+        <h2>🏸 Badminton – The Sport of Speed and Precision</h2>
+        <p><strong>Introduction:</strong> Badminton is a dynamic racket sport played with a shuttlecock over a high net. It demands agility, precision, and lightning-fast reflexes, making it one of the fastest racquet sports in the world.</p>
+        
+        <p><strong>History:</strong> The game has roots in ancient civilizations, but the modern form emerged in British India in the 19th century, known as “Poona.” It spread to England where the first official rules were established in 1873.</p>
+        
+        <p><strong>Basic Rules:</strong></p>
+        <ul>
+          <li>Matches are best of three games, each played to 21 points.</li>
+          <li>A rally is won when the shuttlecock lands in the opponent’s court or they commit a fault.</li>
+          <li>Only one hit is allowed per side before the shuttle crosses the net.</li>
+          <li>The serve must be underhand, striking the shuttle below the waist.</li>
+        </ul>
+        
+        <p><strong>Famous Events:</strong></p>
+        <ul>
+          <li>Olympic Games</li>
+          <li>BWF World Championships</li>
+          <li>Thomas Cup & Uber Cup</li>
+          <li>All England Open</li>
+        </ul>
+        
+        <p><strong>Fun Facts:</strong></p>
+        <ul>
+          <li>The fastest smash recorded in badminton is over 490 km/h.</li>
+          <li>Shuttlecocks are traditionally made with 16 goose feathers.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Famous Players Section -->
+    <div class="players-section">
+      <h2 class="text-center">🏆 Legendary Badminton Players</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/lin_dan.jpeg' %}" alt="Lin Dan">
+          <div class="player-name">Lin Dan</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/lee_chong_wei.jpeg' %}" alt="Lee Chong Wei">
+          <div class="player-name">Lee Chong Wei</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/pv_sindhu.jpeg' %}" alt="P.V. Sindhu">
+          <div class="player-name">P.V. Sindhu</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/carolina_marin.jpeg' %}" alt="Carolina Marin">
+          <div class="player-name">Carolina Marin</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/saina_nehwal.jpeg' %}" alt="Saina Nehwal">
+          <div class="player-name">Saina Nehwal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "sports_app/common/footer.html" %}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+</body>
+</html>
+ 

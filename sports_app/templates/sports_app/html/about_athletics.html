@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athletics</title>
+  {% include "sports_app/common/common_css.html" %}
+
+  <style>
+    .athletics-section {
+      padding: 40px 20px;
+      background-color: #f9fff0;
+    }
+    .athletics-section h2 {
+      color: #2e7d32;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .athletics-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .athletics-section p {
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+    .athletics-section ul {
+      margin-bottom: 20px;
+    }
+    /* Famous players section */
+    .players-section {
+      margin-top: 40px;
+    }
+    .player-card {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .player-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #2e7d32;
+      transition: transform 0.3s;
+    }
+    .player-card img:hover {
+      transform: scale(1.1);
+    }
+    .player-name {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "sports_app/common/header.html" %}
+
+  <!-- Athletics Content -->
+  <section class="athletics-section container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'sports_app/images/ath1.jpg' %}" alt="Athletics Image">
+        <img src="{% static 'sports_app/images/ath2.jpg' %}" alt="Athletics Action Image">
+      </div>
+      <div class="col-md-6">
+        <h2>🏃‍♂️ Athletics – The Core of Olympic Sport</h2>
+        <p><strong>Introduction:</strong> Athletics is a collection of sporting events that involve running, jumping, throwing, and walking. It is often considered the purest form of sport, testing speed, endurance, and strength.</p>
+        
+        <p><strong>History:</strong> Athletics traces its roots back to ancient civilizations, with the first recorded competitions in the ancient Olympic Games in 776 BC. The modern athletics program began in the late 19th century, becoming a core part of the Olympics since 1896.</p>
+        
+        <p><strong>Basic Rules:</strong></p>
+        <ul>
+          <li>Events are divided into track, field, combined events, and road races.</li>
+          <li>Track races require staying within designated lanes where applicable.</li>
+          <li>Field events have specific measurement rules for jumps and throws.</li>
+          <li>False starts result in disqualification.</li>
+        </ul>
+        
+        <p><strong>Famous Events:</strong></p>
+        <ul>
+          <li>Olympic Games</li>
+          <li>World Athletics Championships</li>
+          <li>Diamond League</li>
+          <li>Commonwealth Games</li>
+        </ul>
+        
+        <p><strong>Fun Facts:</strong></p>
+        <ul>
+          <li>Usain Bolt holds the world record for the 100m (9.58s) and 200m (19.19s).</li>
+          <li>The marathon distance of 42.195 km was standardized in 1908.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Famous Athletes Section -->
+    <div class="players-section">
+      <h2 class="text-center">🏆 Legendary Athletes</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/usain_bolt.jpg' %}" alt="Usain Bolt">
+          <div class="player-name">Usain Bolt</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/mo_farah.jpg' %}" alt="Mo Farah">
+          <div class="player-name">Mo Farah</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/jessica_enis.jpeg' %}" alt="Jessica Ennis-Hill">
+          <div class="player-name">Jessica Ennis-Hill</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/carl_lewis.jpeg' %}" alt="Carl Lewis">
+          <div class="player-name">Carl Lewis</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/allyson_felix.jpeg' %}" alt="Allyson Felix">
+          <div class="player-name">Allyson Felix</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "sports_app/common/footer.html" %}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+</body>
+</html>

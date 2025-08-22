@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swimming</title>
+  {% include "sports_app/common/common_css.html" %}
+
+  <style>
+    .swimming-section {
+      padding: 40px 20px;
+      background-color: #f0f9ff;
+    }
+    .swimming-section h2 {
+      color: #005f73;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .swimming-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .swimming-section p {
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+    .swimming-section ul {
+      margin-bottom: 20px;
+    }
+    /* Famous players section */
+    .players-section {
+      margin-top: 40px;
+    }
+    .player-card {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .player-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #005f73;
+      transition: transform 0.3s;
+    }
+    .player-card img:hover {
+      transform: scale(1.1);
+    }
+    .player-name {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #005f73;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header code starts -->
+  {% include "sports_app/common/header.html" %}
+  <!-- header code ends -->
+
+  <!-- Swimming Content -->
+  <section class="swimming-section container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'sports_app/images/swimming1.jpg' %}" alt="Swimming Image">
+        <img src="{% static 'sports_app/images/swimming2.jpg' %}" alt="Swimming Action Image">
+      </div>
+      <div class="col-md-6">
+        <h2>🏊‍♂️ Swimming – The Art of Movement in Water</h2>
+        <p><strong>Introduction:</strong> Swimming is both a competitive sport and a valuable life skill, involving the movement of the body through water using various techniques. It is enjoyed by millions around the world for fitness, recreation, and competition.</p>
+        
+        <p><strong>History:</strong> Swimming dates back to prehistoric times, with cave paintings depicting swimmers from 7,000 years ago. It became a formal sport in the 19th century, with the first Olympic swimming competitions held in 1896 for men and 1912 for women.</p>
+        
+        <p><strong>Basic Rules:</strong></p>
+        <ul>
+          <li>Competitions are governed by FINA rules.</li>
+          <li>Main strokes: freestyle, backstroke, breaststroke, and butterfly.</li>
+          <li>Swimmers must stay in their assigned lanes.</li>
+          <li>Specific stroke techniques must be followed.</li>
+          <li>The fastest swimmer to touch the wall wins.</li>
+        </ul>
+        
+        <p><strong>Famous Events:</strong></p>
+        <ul>
+          <li>Olympic Games</li>
+          <li>FINA World Championships</li>
+          <li>Commonwealth Games</li>
+          <li>Pan Pacific Swimming Championships</li>
+        </ul>
+        
+        <p><strong>Fun Facts:</strong></p>
+        <ul>
+          <li>Michael Phelps is the most decorated Olympian of all time with 23 gold medals.</li>
+          <li>Swimming burns more calories than running due to water resistance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Famous Players Section -->
+    <div class="players-section">
+      <h2 class="text-center">🏆 Legendary Swimmers</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/michael.jpeg' %}" alt="Michael Phelps">
+          <div class="player-name">Michael Phelps</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/kaety.jpeg' %}" alt="Katie Ledecky">
+          <div class="player-name">Katie Ledecky</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/ian.jpeg' %}" alt="Ian Thorpe">
+          <div class="player-name">Ian Thorpe</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/mark.jpeg' %}" alt="Mark Spitz">
+          <div class="player-name">Mark Spitz</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/missy.jpeg' %}" alt="Missy Franklin">
+          <div class="player-name">Missy Franklin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer code starts -->
+  {% include "sports_app/common/footer.html" %}
+  <!-- footer code ends -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+</body>
+</html>
+
+

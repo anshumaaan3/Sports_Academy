@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  {% include "sports_app/common/common_css.html"%}
+  <style>
+    .formentities {
+      text-align: center;
+      background-color: white;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      border: 2px solid black;
+      margin-top: 10px;
+
+    }
+
+    .main-div {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+      <!-- navbar    -->
+    {% include 'sports_app/common/header.html' %}
+
+    <!-- REGISTERATION FORM-->
+         <div class="container" mt-10 mb-5 style="text-align: center;">
+      <h1>Registration Form</h1>
+    </div>
+    <div class="main-div">
+      <div class="formentities">
+
+
+<form method="POST" action="/Registration/" enctype="multipart/form-data">
+  
+        {% csrf_token %}
+
+
+        <div class="mb-3">
+          <input type="email" class="form-control" name="email" placeholder="Enter Email here" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="password" class="form-control" name="password" placeholder="Enter Password here" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control" name="name" placeholder="Enter Name here" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="tel" class="form-control" name="phone" placeholder="Enter Phone Number here" required>
+        </div>
+
+        <div class="mb-4">
+          <input type="file" class="form-control" name="profile_pic" placeholder="Upload Profile Picture">
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-success px-4">Submit</button>
+        </div>
+  </form>
+  </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- footer -->
+  {% include "sports_app/common/footer.html"%}
+</body>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>

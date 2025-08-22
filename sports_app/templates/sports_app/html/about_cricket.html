@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket</title>
+  {% include "sports_app/common/common_css.html" %}
+
+  <style>
+    .cricket-section {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+    .cricket-section h2 {
+      color: #2c3e50;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .cricket-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .cricket-section p {
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+    .cricket-section ul {
+      margin-bottom: 20px;
+    }
+    /* Famous players section */
+    .players-section {
+      margin-top: 40px;
+    }
+    .player-card {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .player-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #2c3e50;
+      transition: transform 0.3s;
+    }
+    .player-card img:hover {
+      transform: scale(1.1);
+    }
+    .player-name {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header code starts -->
+  {% include "sports_app/common/header.html" %}
+  <!-- header code ends -->
+
+  <!-- Cricket Content -->
+  <section class="cricket-section container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'sports_app/images/cricketimage02.jpg' %}" alt="Cricket Image">
+    
+        <img src="{% static 'sports_app/images/cricketimage15.jpg' %}" alt="Cricket Action Image">
+      </div>
+      <div class="col-md-6">
+        <h2>🏏 Cricket – The Gentleman's Game</h2>
+        <p><strong>Introduction:</strong> Cricket is one of the most popular sports in the world, loved by millions across countries like India, England, Australia, and South Africa. Played between two teams of eleven players each, the game is known for its combination of skill, strategy, and sportsmanship. Whether it’s a high-energy T20 match or a traditional Test game, cricket offers excitement for players and fans alike.</p>
+        
+        <p><strong>History:</strong> Cricket originated in England during the 16th century. It became an international sport in the 19th century, spreading to British colonies. The first-ever international cricket match was played in 1844 between Canada and the USA. Over time, cricket evolved into three main formats – Test Cricket, One-Day Internationals (ODIs), and Twenty20 (T20).</p>
+        
+        <p><strong>Basic Rules:</strong></p>
+        <ul>
+          <li>Each team has 11 players.</li>
+          <li>One team bats while the other bowls/fields.</li>
+          <li>Runs are scored by running between wickets or hitting boundaries.</li>
+          <li>Bowlers try to dismiss batters through various methods.</li>
+          <li>Team with the highest runs wins.</li>
+        </ul>
+        
+        <p><strong>Famous Tournaments:</strong></p>
+        <ul>
+          <li>ICC Cricket World Cup</li>
+          <li>ICC T20 World Cup</li>
+          <li>The Ashes</li>
+          <li>Indian Premier League (IPL)</li>
+        </ul>
+        
+        <p><strong>Fun Facts:</strong></p>
+        <ul>
+          <li>The longest cricket match lasted 12 days (England vs South Africa, 1939).</li>
+          <li>In cricket, a "Duck" means scoring zero runs.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Famous Players Section -->
+    <div class="players-section">
+      <h2 class="text-center">🏆 Legendary Players</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/rickyponting.jpg' %}" alt="Ricky Ponting">
+          <div class="player-name">Ricky Ponting</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/sachintendulkar.jpeg' %}" alt="Sachin Tendulkar">
+          <div class="player-name">Sachin Tendulkar</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/muttiah Muralitharan.jpeg' %}" alt="Muttiah Muralitharan">
+          <div class="player-name">Muttiah Muralitharan</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/virat.jpeg' %}" alt="Virat Kohli">
+          <div class="player-name">Virat Kohli</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6 player-card">
+          <img src="{% static 'sports_app/images/vivian.jpeg' %}" alt="Sir Vivian Richards">
+          <div class="player-name">Sir Vivian Richards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer code starts -->
+  {% include "sports_app/common/footer.html" %}
+  <!-- footer code ends -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+</body>
+</html>
+
+
