@@ -2,7 +2,7 @@
 
 from pathlib import Path
 import os
-
+CSRF_TRUSTED_ORIGINS = [os.getenv('CSRF_ORIGIN', 'https://sports-academy-2.onrender.com')]
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-i*evz$l$fto!b1n5@)uh+t6n*2q22w-$i_rlj2ep8*hlv1creh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
