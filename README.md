@@ -2,7 +2,6 @@
 
 A full-stack web application built with **Django** to digitalize a sports academy’s workflow — from student admissions to coach management.  
 
-🚀 **Live Demo:** [Your Render Link Here]  
 
 ---
 
